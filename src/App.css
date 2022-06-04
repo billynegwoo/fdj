@@ -1,38 +1,92 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-content: start
+}
+.circle {
+  margin: 10px;
+  box-shadow: 0 5px 10px 0 hsl(0deg 0% 75% / 50%);
+  position: relative;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+  height: 40px;
+  width: 40px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: 0;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #001367;
+  background: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.star {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 700;
+  height: 60px;
+  width: 60px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  outline: 0;
+  border: 0;
+  -webkit-tap-highlight-color: transparent;
+  border-radius: 0;
+  color: #eebb05;
+  background: url(../public/star.svg) no-repeat scroll center 0 transparent;
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.star.selected {
+  background: url(../public/selectedStar.svg) no-repeat scroll center 0 transparent;
+  color: #ffffff;
+}
+
+.circle.selected {
+  background: #001367;
+  color: #fff;
+}
+
+.container.numbers {
+  width: 600px;
+}
+
+.container.stars {
+  width: 180px;
+}
+
+.grid {
+  margin: 100px auto;
+  width: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.price {
+  margin: 50px;
+  border-radius: 5px;
+  width: fit-content;
+  color: #ffffff;
+  padding: .5rem;
+  box-shadow: unset;
+  background: #282d87;
+  font-size: 24px;
+  font-weight: bold;
 }
